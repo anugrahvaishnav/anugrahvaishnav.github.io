@@ -1,0 +1,15 @@
+{{ $from := .Get "from" }}
+{{ $to := .Get "to" | default "now" }}
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" }}
+
+<div class="timeline-entry">
+  <div class="timeline-date">
+    <span>{{ $from }} - {{ $to }}</span>
+  </div>
+  <div class="timeline-content">
+    <h3>{{ $title }}</h3>
+    <h4>{{ $subtitle }}</h4>
+    {{ .Inner }}
+  </div>
+</div>
