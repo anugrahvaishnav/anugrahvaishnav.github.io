@@ -1,0 +1,34 @@
+baseURL = '/'
+title = 'Home'
+languageCode = 'en-us'
+theme = 'ghostwriter'
+
+[Params]
+  author = 'Anugrah Vaishnav'
+  headline = "Anugrah Vaishnav"
+  intro = true
+  description = true
+  bio = true
+  role = 'M.S. in Computer Science'
+  Image = '/images/anugrah (2).jpg'
+  resume = 'images/Anugrah_Resume_DS-4.pdf'
+  organization = 'University of Massachusetts Lowell'
+  github = 'https://github.com/prototypeanugrah'
+  email = 'vaishnav.anugrah123[AT]gmail.com'
+  linkedin = 'https://www.linkedin.com/in/anugrah-vaishnav/'
+  twitter = 'https://x.com/vanugrah007'
+  custom_css = ['css/custom.css']
+
+[menu]
+  [[menu.main]]
+    name = 'Bio'
+    url = '/#bio'
+    weight = 2
+  [[menu.main]]
+    name = 'Experience'
+    url = '/#exp'
+    weight = 3
+  [[menu.main]]
+    name = 'Research'
+    url = '/#res-exp'
+    weight = 4
