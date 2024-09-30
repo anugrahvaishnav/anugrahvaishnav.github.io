@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = "https://anugrahvaishnav.github.io/anugrahvaishnav/"
 title = 'Home'
 languageCode = 'en-us'
 theme = 'ghostwriter'
