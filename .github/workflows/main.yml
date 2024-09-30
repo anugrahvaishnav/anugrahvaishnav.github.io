@@ -1,28 +1,4 @@
-# name: Deploy Hugo site to Pages
-
-# on:
-#   push:
-#     branches: ["main"]
-#   workflow_dispatch:
-
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#       - name: Setup Hugo
-#         uses: peaceiris/actions-hugo@v2
-#         with:
-#           hugo-version: 'latest'
-#       - name: Build
-#         run: hugo --minify
-#       - name: Deploy
-#         uses: peaceiris/actions-gh-pages@v3
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           publish_dir: ./public
-
-name: Deploy to GitHub Pages
+name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
@@ -37,19 +13,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
       with:
-        node-version: '14'  # Specify the Node.js version you need
+        hugo-version: 'latest'
 
-    - name: Install dependencies
-      run: npm install  # Adjust this if you use yarn or another package manager
-
-    - name: Build the project
-      run: npm run build  # Adjust this to your build script
+    - name: Build the site
+      run: hugo
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build  # Adjust this to your build output directory
+        publish_dir: ./public
