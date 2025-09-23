@@ -51,7 +51,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: 'twitter',
-    url: 'https://twitter.com/yourusername',
+    url: 'https://x.com/vanugrah007',
     icon: 'fab fa-twitter',
     label: 'Twitter'
   }
